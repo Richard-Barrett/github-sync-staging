@@ -17,5 +17,5 @@ jobs:
           fetch-depth: 0
       - run: |
           git remote add github-sync-master https://github.com/Richard-Barrett/github-sync-master
-          git pull 
+          git pull github-sync-master main --no-rebase 
           git push --set-upstream github-sync-master main
