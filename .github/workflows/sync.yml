@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.MY_TOKEN_WITH_PUSH_ACCESS_TO_THE_REMOTE }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
       - run: |
           git remote add github-sync-master https://github.com/Richard-Barrett/github-sync-master
