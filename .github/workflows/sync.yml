@@ -1,6 +1,8 @@
 name: Sync to GitHub-Sync-Master
 
-on: [pull_request_target, issues]
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   Sync-Up:
@@ -15,4 +17,5 @@ jobs:
           fetch-depth: 0
       - run: |
           git remote add github-sync-master https://github.com/Richard-Barrett/github-sync-master
+          git pull 
           git push -f --set-upstream github-sync-master main
